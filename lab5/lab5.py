@@ -71,14 +71,12 @@ class DSA:
 
         hasher = hashes.Hash(self.hash_algo)
 
-        # Читаємо файл шматками по 64 KB
         with open(input_path, "rb") as f:
             while chunk := f.read(65536):
                 hasher.update(chunk)
 
         digest = hasher.finalize()
 
-        # Підписуємо вже готовий хеш
         signature_bytes = self.private_key.sign(
             digest,
             utils.Prehashed(self.hash_algo)
