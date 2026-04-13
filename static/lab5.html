@@ -21,7 +21,7 @@
 
         <div class="card">
             <h2>2. Створення підпису</h2>
-            <label>Приватний ключ (.pem):</label>
+            <label for="sign-key">Приватний ключ (.pem):</label>
             <input type="file" id="sign-key">
 
             <div class="toggle-group">
@@ -30,12 +30,12 @@
             </div>
 
             <div id="section-sign-text" class="input-section active">
-                <label>Текст для підпису:</label>
+                <label for="sign-text-input">Текст для підпису:</label>
                 <input type="text" id="sign-text-input" placeholder="Введіть текст...">
             </div>
 
             <div id="section-sign-file" class="input-section">
-                <label>Файл для підпису:</label>
+                <label for="sign-file-input">Файл для підпису:</label>
                 <input type="file" id="sign-file-input">
             </div>
 
@@ -45,7 +45,7 @@
 
         <div class="card">
             <h2>3. Перевірка підпису</h2>
-            <label>Публічний ключ (.pem):</label>
+            <label for="verify-key">Публічний ключ (.pem):</label>
             <input type="file" id="verify-key">
 
             <div class="toggle-group">
@@ -54,16 +54,16 @@
             </div>
 
             <div id="section-verify-text" class="input-section active">
-                <label>Оригінальний текст:</label>
+                <label for="verify-text-input">Оригінальний текст:</label>
                 <input type="text" id="verify-text-input" placeholder="Введіть текст...">
             </div>
 
             <div id="section-verify-file" class="input-section">
-                <label>Оригінальний файл:</label>
+                <label for="verify-file-input">Оригінальний файл:</label>
                 <input type="file" id="verify-file-input">
             </div>
 
-            <label>Файл підпису (.sig):</label>
+            <label for="verify-sig-input">Файл підпису (.sig):</label>
             <input type="file" id="verify-sig-input" accept=".sig">
 
             <button onclick="processVerify()" class="btn-green">Перевірити справжність</button>

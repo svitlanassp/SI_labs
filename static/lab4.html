@@ -24,10 +24,10 @@
 
         <div class="card">
             <h2>2. Шифрування файлу</h2>
-            <label>Публічний ключ:</label>
+            <label for="enc-key-file">Публічний ключ:</label>
             <input type="file" id="enc-key-file" accept=".pem">
 
-            <label>Файл для шифрування:</label>
+            <label for="enc-data-file">Файл для шифрування:</label>
             <input type="file" id="enc-data-file">
 
             <button onclick="process('encrypt')">🔒 Зашифрувати файл</button>
@@ -36,10 +36,10 @@
 
         <div class="card">
             <h2>3. Розшифрування файлу</h2>
-            <label>Приватний ключ:</label>
+            <label for="dec-key-file">Приватний ключ:</label>
             <input type="file" id="dec-key-file" accept=".pem">
 
-            <label>Зашифрований файл:</label>
+            <label for="dec-data-file">Зашифрований файл:</label>
             <input type="file" id="dec-data-file">
 
             <button onclick="process('decrypt')" class="btn-green">🔓 Розшифрувати файл</button>
