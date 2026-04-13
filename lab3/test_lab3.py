@@ -4,7 +4,7 @@ from lab3.lab3 import RC5
 
 class TestRC5(unittest.TestCase):
     def setUp(self):
-        self.password = "secret"
+        self.password = "secret" #NOSONAR
         self.cipher = RC5(w=16, r=16, password=self.password)
         self.test_in = "test_input.bin"
         self.test_out = "test_output.enc"
